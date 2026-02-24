@@ -1,6 +1,10 @@
 import anthropic
 import time
+import os
 from typing import List
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class ClaudeArchitect:
     def __init__(self, api_key: str):
@@ -65,6 +69,5 @@ def run_comprehensive_demo(api_key):
     print(f"REPORT 2:\n{infra_report}\n")
 
 if __name__ == "__main__":
-    import os
-    MY_KEY = os.environ.get("ANTHROPIC_API_KEY", "your-api-key-here")
+    MY_KEY = os.environ.get("ANTHROPIC_API_KEY")
     run_comprehensive_demo(MY_KEY)
