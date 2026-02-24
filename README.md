@@ -11,21 +11,19 @@
 
 ### 📂 Project Content
 
-This repository contains the architectural analysis and presentation materials for **Claude 3.5 Sonnet**.
+This repository contains the architectural analysis and demo implementation for **Claude 3.5 Sonnet**.
 
-* **`claude_architect.py`**: A Python script to automate the creation of the project presentation slides.
+* **`claude_architect.py`**: A Python script that uses the Claude API to perform an automated architectural audit. It analyzes scalability bottlenecks (N+1 query patterns), microservices isolation issues (SPOF), and GDPR/KVKK compliance risks.
 * **Architecture Design**: Detailed breakdown of Large Language Model (LLM) scaling, inference optimization, and system constraints.
 
 ---
 
 ### 🚀 Quick Start
 
-To generate the presentation slides, run:
-
-```bash
-python claude_architect.py
-
-```
+1. Install dependencies: `pip install anthropic python-dotenv`
+2. Create a `.env` file in the project directory and add your API key: `ANTHROPIC_API_KEY=your-api-key-here`
+3. Get your API key from [console.anthropic.com](https://console.anthropic.com)
+4. Run the script: `python claude_architect.py`
 
 ---
 
